@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaperVault</title>
+    <link rel="stylesheet" type="text/css" href="home.css"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="mainpagebegin">
+       <div class="overlay">
+            <div id="colour" class="left">
+                <div id="paragraph" class="centeredpara">
+                    <p class="paragraphed">Hello<br>Welcome to PaperVault, a Question Paper Website<br></p>
+                <button id="mover" class="mover" onclick="load()">Let's Go!</button>
+                </div>
+            </div>
+    
+            <div id="oppcolour" class="right">
+                <p class="signed">Made by <a href="https://nikhilmathur119.github.io/web/home.html">Nikhil Mathur</a></p>
+            </div>
+
+        </div>
+
+        <div class="mainpage">
+
+            <div class="fixed-head">
+                <div class="head">
+                    <div class="searchbar">
+                        <input type="text" id="searchInput" placeholder="Search...">        
+                    </div>
+                    <select id="filtersOptions" onchange="filterByaCategory()">
+                        <option value="all">All Categories</option>
+                        <option value="cat1">CAT 1</option>
+                        <option value="cat2">CAT 2</option>
+                        <option value="fat">FAT</option>
+                    </select>
+                    <div class="crossdiv">
+                        <button class="cross" type="button" onclick="reset()">Reset</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div id="content" class="content">
+                    <div class="pdf fat fade-left">
+                        <a href="#" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project2\\pdfs\\BEEE FAT.pdf')">
+                            <img class="thumbnail" src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\BEEEFAT.png" alt="Thumbnail">
+                        </a>
+                        <p>BEEE <br>C2<br>FAT</p>
+                    </div>
+
+                    <div class="pdf cat1 fade-left">
+                        <a href="#" class="thumbnail" onclick="openModal('C:\Users\\user\\OneDrive\\Desktop\\web dev learning\\project2\\pdfs\\CALCULUS CAT1.pdf')">
+                            <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\CALC,CAT1.png" alt="Thumbnail">
+                        </a>
+                        <p>Calculus<br>G2 <br>CAT 1</p>
+                    </div>  
+                    <div class="pdf cat2 fade-left">
+                        <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project2\\pdfs\\Complex CAT2.pdf')">
+                            <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\complexcat2.png" alt="Thumbnail">
+                        </a>
+                        <p>Complex Variables and Linear Algebra<br>A2  <br>CAT 2</p>
+                    </div>
+                    <div class="pdf cat1 fade-left">
+                        <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project3\\pdfs\\Computer Architecture and Organization CAT1.pdf')">
+                            <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project3\images\CAOcat1.png" alt="Thumbnail">
+                        </a>
+                        <p>Computer Architecture and Organization<br>D1 <br>CAT 1</p>
+                    </div>
+                    <div class="pdf cat2 fade-left">
+                        <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project3\\pdfs\\Computer Architecture and Organization.pdf')">
+                            <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project3\images\CAOcat2.png" alt="Thumbnail">
+                        </a>
+                        <p>Computer Architecture and Organization<br>D1 <br>CAT 2</p>
+                    </div>
+                    <div class="pdf cat1 fade-left">
+                        <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project3\\pdfs\\Concrete Technology.pdf')">
+                            <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project3\images\concretetechcat1.png" alt="Thumbnail">
+                        </a>
+                        <p>Concrete Technology<br>A1<br>CAT 1</p>
+                    </div>
+                    <!--HERE-->
+                    <div class="pdf cat1 fade-left">
+                        <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project3\\pdfs\\DAA CAT1.pdf')">
+                            <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project3\images\DAAcat1.png" alt="Thumbnail">
+                        </a>
+                        <p>Design and Analysis of Algorithms<br>A1<br>CAT 1</p>
+                    </div>
+                    <div class="pdf cat2 fade-left">
+                        <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project3\\pdfs\\DAA CAT2.pdf')">
+                            <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project3\images\DAAcat2.png" alt="Thumbnail">
+                        </a>
+                        <p>Design and Analysis of Algorithms<br>A1<br>CAT 2</p>
+                    </div>
+                    <div class="pdf cat1 fade-left">
+                        <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project3\\pdfs\\MicroEconomics CAT1.pdf')">
+                            <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project3\images\Microeconomicscat1.png" alt="Thumbnail">
+                        </a>
+                        <p>Microeconomics<br>F1<br>CAT 1</p>
+                    </div>
+                    <div class="pdf fat fade-left">
+                        <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project3\\pdfs\\Physics FAT.pdf')">
+                            <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\Physicsfat.png" alt="Thumbnail">
+                        </a>
+                        <p>Engineering Physics<br>E1<br>FAT</p>
+                    </div>
+                    <div class="pdf cat1 fade-left">
+                        <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project3\\pdfs\\Probability CAT1.pdf')">
+                            <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\Probabilitycat1.png" alt="Thumbnail">
+                        </a>
+                        <p>Probability and Statistics<br>G1<br>CAT 1</p>
+                    </div>
+                    <div class="pdf cat2 fade-left">
+                        <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project3\\pdfs\\Probability and Statistics CAT2.pdf')">
+                            <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\Probabilitycat2.png" alt="Thumbnail">
+                        </a>
+                        <p>Probability and Statistics<br>G1<br>CAT 2</p>
+                    </div>
+                    <div class="pdf cat2 fade-left">
+                        <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project3\\pdfs\\Soil Mechanics.pdf')">
+                            <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\Soilcat2.png" alt="Thumbnail">
+                        </a>
+                        <p>Soil Mechanics<br>C1<br>CAT 2</p>
+                    </div>
+                    <div class="pdf cat2 fade-left">
+                        <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project3\\pdfs\\Structural Analysis.pdf')">
+                            <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\Structuralcat2.png" alt="Thumbnail">
+                        </a>
+                        <p>Structural Analysis<br>D1<br>CAT 2</p>
+                    </div>
+                    <!--HERE-->
+                    <div class="pdf cat1 fade-left">
+                        <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project3\\pdfs\\Theory Of Computation CAT1.pdf')">
+                            <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\TOCcat1.png" alt="Thumbnail">
+                        </a>
+                        <p>Theory of Computation<br>B1<br>CAT 1</p>
+                    </div>
+                    <div class="pdf cat2 fade-left">
+                        <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project3\\pdfs\\Theory of Computation CAT2.pdf')">
+                            <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\TOCcat2.png" alt="Thumbnail">
+                        </a>
+                        <p>Theory of Computation<br>B1<br>CAT 2</p>
+                    </div>
+                    <div class="pdf cat2 fade-left">
+                        <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project3\\pdfs\\transportation engineering.pdf')">
+                            <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\transportationcat2.png" alt="Thumbnail">
+                        </a>
+                        <p>Transportation Engineering<br>G1<br>CAT 2</p>
+                    </div>
+                    <div class="pdf cat1 fade-left">
+                        <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project2\\pdfs\\DIFFERENTIAL CAT1.pdf')">
+                            <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\differentialcat1.png" alt="Thumbnail">
+                        </a>
+                        <p>Differential Equations and Transforms<br>A1<br>CAT 1</p>
+                    </div>
+
+                <div class="pdf cat1 fade-left">
+                    <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project2\\pdfs\\Discrete CAT1.pdf')">
+                        <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\discretecat1.png" alt="Thumbnail">
+                    </a>
+                    <p>Discrete Mathematics and Graph Theory<br>A1 <br>CAT 1</p>
+                </div>
+
+                <div class="pdf cat2 fade-left">
+                    <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project2\\pdfs\\Discrete CAT2.pdf')">
+                        <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\discretecat2.png" alt="Thumbnail">
+                    </a>
+                    <p>Discrete Mathematics and Graph Theory<br>A1  <br>CAT 2</p>
+                </div>
+
+                <div class="pdf fat fade-left">
+                    <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project2\\pdfs\\Discrete FAT.pdf')">
+                        <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\discretefat.png" alt="Thumbnail">
+                    </a>
+                    <p>Discrete Mathematics and Graph Theory<br>A1  <br>FAT</p>
+                </div>
+
+                <div class="pdf cat1 fade-left">
+                    <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project2\\pdfs\\DSA CAT1.pdf')">
+                        <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\dsacat1.png" alt="Thumbnail">
+                    </a>
+                    <p>Data Structures and Algorithms<br>C1 <br>CAT 1</p>
+                </div>
+
+                <div class="pdf fat fade-left">
+                    <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project2\\pdfs\\DSA FAT.pdf')">
+                        <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\DSAfat.png" alt="Thumbnail">
+                    </a>
+                    <p>Data Structures and Algorithms<br>C1 <br>FAT</p>
+                </div>
+
+                <div class="pdf cat1 fade-left">
+                    <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project2\\pdfs\\DSD CAT1.pdf')">
+                        <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\dsdcat1.png" alt="Thumbnail">
+                    </a>
+                    <p>Digital System Design<br>B1 <br>CAT 1</p>
+                </div>
+
+                <div class="pdf cat2 fade-left">
+                    <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project2\\pdfs\\DSD CAT2.pdf')">
+                        <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\dsdcat2.png" alt="Thumbnail">
+                    </a>
+                    <p>Digital System Design<br>B1 <br>CAT 2</p>
+                </div>
+
+                <div class="pdf fat fade-left">
+                    <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project2\\pdfs\\DSD FAT.pdf')">
+                        <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\DSDfat.png" alt="Thumbnail">
+                    </a>
+                    <p>Digital System Design<br>B1  <br>FAT</p>
+                </div>
+
+                <div class="pdf cat1 fade-left">
+                    <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project2\\pdfs\\OOPS CAT1.pdf')">
+                        <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\oopscat1.png" alt="Thumbnail">
+                    </a>
+                    <p>Object Oriented Programming<br>D1<br>CAT 1</p>
+                </div>
+
+                <div class="pdf cat2 fade-left">
+                    <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project2\\pdfs\\OOPS CAT2.pdf')">
+                        <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\oopscat2.png" alt="Thumbnail">
+                    </a>
+                    <p>Object Oriented Programming<br>D1 <br>CAT 2</p>
+                </div>
+
+                <div class="pdf fat fade-left">
+                    <a href="#" class="thumbnail" onclick="openModal('C:\\Users\\user\\OneDrive\\Desktop\\web dev learning\\project2\\pdfs\\OOPS FAT.pdf')">
+                        <img src="C:\Users\user\OneDrive\Desktop\web dev learning\project2\images\oopsfat.png" alt="Thumbnail">
+                    </a>
+                    <p>Object Oriented Programming<br>D1<br>FAT</p>
+                </div>
+
+            </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <iframe id="iframe" style="width: 100%; height: 90vh;" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
