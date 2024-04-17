@@ -159,6 +159,17 @@ function bodycolour()
     // Set the text color of the paragraph to the opposite color
     var cols = document.getElementById("oppcolour");
     cols.style.backgroundColor = oppositeColor;
+
+
+        var signedElements = document.getElementsByClassName('signed');
+    for (var i = 0; i < signedElements.length; i++) {
+        signedElements[i].style.color = color;
+    }
+
+    // Change font color for elements with class "paragraphed"
+    var paragraphedElements = document.getElementsByClassName('paragraphed');
+    for (var i = 0; i < paragraphedElements.length; i++) {
+        paragraphedElements[i].style.color = oppositeColor;
 }
 
 function mapValue(value, fromMin, fromMax, toMin, toMax) {
